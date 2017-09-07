@@ -1,0 +1,17 @@
+<html>
+  <head>
+    <title>Subject</title>
+  </head>
+  <body>
+    <h3>Subject Data</h3>
+    <table>
+      <th>ID</th>
+      <th>Subject Name</th>
+      <% subject.forEach(i=>{ %>
+      <tr>
+        <td><%=i.id%></td>
+        <td><%=i.subject_name%></td>
+      </tr>
+      <%})%>
+  </body>
+</html>
