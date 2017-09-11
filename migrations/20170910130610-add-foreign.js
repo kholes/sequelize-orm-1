@@ -9,11 +9,17 @@ module.exports = {
       Example:
       return queryInterface.createTable('users', { id: Sequelize.INTEGER });
     */
-    // queryInterface.addColumn(
-    //   'Teachers',
-    //   'email',
-    //   Sequelize.STRING
-    // )
+    queryInterface.addConstraint('Teachers', ['id_subject'], {
+      type: 'FOREIGN KEY',
+      name: 'id_subject',
+      references: { //Required field
+        table: 'Subjects',
+        field: 'id'
+      },
+      onDelete: 'cascade',
+      onUpdate: 'cascade'
+    });
+
   },
 
   down: function (queryInterface, Sequelize) {

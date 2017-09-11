@@ -14,6 +14,6 @@ app.use('/teacher', teacher);
 app.use('/subject', subject);
 app.use('/student', student);
 
-app.listen(4000,()=>{
-  console.log('Gunakan port 4000');
+app.listen(3000,()=>{
+  console.log('Gunakan port 3000');
 });
